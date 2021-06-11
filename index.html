@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Thông tin sv nhập liệu -->
+                    <h3 class="text-center">Quản lý cửa hàng</h3>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-4 mb-4">
+                                <p>Mã sản phẩm</p>
+                                <input
+                                    type="text"
+                                    name=""
+                                    id="productID"
+                                    class="form-control"
+                                />
+                            </div>
+                            <div class="col-4 mb-4">
+                                <p>Tên sản phẩm</p>
+                                <input
+                                    type="text"
+                                    name=""
+                                    id="productName"
+                                    class="form-control"
+                                />
+                            </div>
+                            <div class="col-4 mb-4">
+                                <p>Giá</p>
+                                <input
+                                    type="text"
+                                    name=""
+                                    id="productPrice"
+                                    class="form-control"
+                                />
+                            </div>
+                            <div class="col-4 mb-4">
+                                <p>Màn hình</p>
+                                <input
+                                    type="text"
+                                    name=""
+                                    id="screen"
+                                    class="form-control"
+                                />
+                            </div>
+                            <div class="col-4 mb-4">
+                                <p>Camera Sau</p>
+                                <input
+                                    type="text"
+                                    name=""
+                                    id="backCamera"
+                                    class="form-control"
+                                />
+                            </div>
+                            <div class="col-4 mb-4">
+                                <p>Camera trước</p>
+                                <input
+                                    type="text"
+                                    name=""
+                                    id="frontCamera"
+                                    class="form-control"
+                                />
+                            </div>
+                            <div class="col-4 mb-4">
+                                <p>Mô tả sản phẩm</p>
+                                <input
+                                    type="text"
+                                    name=""
+                                    id="desc"
+                                    class="form-control"
+                                />
+                            </div>
+                            <div class="col-4 mb-4">
+                                <p>Loại sản phẩm</p>
+                                <select id="type" class="form-control">
+                                    <option value="samsung">Samsung</option>
+                                    <option value="iphone">Iphone</option>
+                                </select>
+                            </div>
+                            <div class="col-4 mb-4">
+                                <p>Hình sản phẩm</p>
+                                <input
+                                    type="text"
+                                    name=""
+                                    id="productImage"
+                                    class="form-control"
+                                />
+                            </div>
+                            <div class="col-4 mb-4">
+                                <p>Mô tả hình ảnh</p>
+                                <input
+                                    type="text"
+                                    name=""
+                                    id="productImg"
+                                    class="form-control"
+                                />
+                            </div>
+                            <div class="col-4 mb-4">
+                                <p>Hàng tồn kho</p>
+                                <input
+                                    type="text"
+                                    name=""
+                                    id="inventory"
+                                    class="form-control"
+                                />
+                            </div>
+                            <div class="col-4 mb-4">
+                                <p>Đánh giá sản phẩm</p>
+                                <input
+                                    type="text"
+                                    name=""
+                                    id="rating"
+                                    class="form-control"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button id="btnXacNhan" class="btn btn-success">
+                            Xác nhận
+                        </button>
+                        <button id="btnLuuThongTin" class="btn btn-primary">
+                            Lưu thông tin
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <table class="table my-5">
+                <thead>
+                    <tr>
+                        <th>Mã sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Màn hình</th>
+                        <th>Camera sau</th>
+                        <th>Camera trước</th>
+                        <th>Mô tả sản phẩm</th>
+                        <th>Loại sản phẩm</th>
+                        <th>Hình sản phẩm</th>
+                        <th>Hàng tồn kho</th>
+                        <th>Đánh giá sản phẩm</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tblProduct"></tbody>
+            </table>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- axios, cdn để kết nối với backend -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+            integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- models -->
+        <script src="./models/Product.js"></script>
+        <script src="./main.js"></script>
+    </body>
+</html>
